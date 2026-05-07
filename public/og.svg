@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1117"/>
+      <stop offset="1" stop-color="#181b24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb84d"/>
+      <stop offset="1" stop-color="#ffd28a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="80" y="320" font-family="system-ui, sans-serif" font-size="160" font-weight="800"
+        fill="url(#accent)">RagCalc</text>
+  <text x="84" y="400" font-family="system-ui, sans-serif" font-size="44" font-weight="500"
+        fill="#9aa1b3">Calculadoras para Ragnarok Online</text>
+  <text x="84" y="540" font-family="system-ui, sans-serif" font-size="32" font-weight="400"
+        fill="#6dd58c">ragcalc.web.app</text>
+</svg>
