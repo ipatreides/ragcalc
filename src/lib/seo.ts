@@ -1,4 +1,4 @@
-const SITE_URL = 'https://ragcalc.web.app';
+const SITE_URL = 'https://calc.latam-tools.com.br';
 const SITE_NAME = 'RagCalc';
 
 export interface PageSeo {

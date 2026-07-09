@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ragcalc.web.app/sitemap.xml
+Sitemap: https://calc.latam-tools.com.br/sitemap.xml

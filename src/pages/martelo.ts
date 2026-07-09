@@ -4,7 +4,7 @@ import { applySeo, calculatorJsonLd } from '../lib/seo';
 import '../styles/global.css';
 import '../styles/calculator.css';
 
-const url = 'https://ragcalc.web.app/calc/martelo';
+const url = 'https://calc.latam-tools.com.br/calc/martelo';
 
 applySeo({
   title: 'Calculadora de Refino — Martelo de Refino Sombrio | RagCalc',

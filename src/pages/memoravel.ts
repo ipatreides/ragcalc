@@ -4,7 +4,7 @@ import { applySeo, calculatorJsonLd } from '../lib/seo';
 import '../styles/global.css';
 import '../styles/calculator.css';
 
-const url = 'https://ragcalc.web.app/calc/memoravel';
+const url = 'https://calc.latam-tools.com.br/calc/memoravel';
 
 applySeo({
   title: 'Calculadora de Insígnia — Memorável | RagCalc',

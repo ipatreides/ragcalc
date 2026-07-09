@@ -4,7 +4,7 @@ import { applySeo, calculatorJsonLd } from '../lib/seo';
 import '../styles/global.css';
 import '../styles/calculator.css';
 
-const url = 'https://ragcalc.web.app/calc/diadema';
+const url = 'https://calc.latam-tools.com.br/calc/diadema';
 
 applySeo({
   title: 'Calculadora de Insígnia — Diadema Temporal | RagCalc',

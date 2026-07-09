@@ -4,7 +4,7 @@ import '../styles/global.css';
 import '../styles/calculator.css';
 import '../styles/exp.css';
 
-const url = 'https://ragcalc.web.app/calc/exp';
+const url = 'https://calc.latam-tools.com.br/calc/exp';
 const description =
   'Monte o melhor conjunto de +% de EXP ao derrotar monstros no Ragnarok Online LATAM: ' +
   'veja o total por faixa de nível, bônus de conjunto e a prévia do personagem.';
