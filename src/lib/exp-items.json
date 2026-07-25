@@ -2101,51 +2101,6 @@
    "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=Carta+Planta+Carn%C3%ADvora"
   },
   {
-   "id": 31518,
-   "name": "[Visual] Pipocas Saltitantes",
-   "slot": "visualTopo",
-   "exp": {
-    "ate99": 20,
-    "de100a174": 20,
-    "nv175mais": 20
-   },
-   "caveats": "Efeito somente durante o evento das Pipocas.",
-   "raceOnly": null,
-   "view": 1763,
-   "dp": "https://www.divine-pride.net/database/item/31518",
-   "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=%5BVisual%5D+Pipocas+Saltitantes"
-  },
-  {
-   "id": 31736,
-   "name": "[Visual] Peruca de Pipoca",
-   "slot": "visualTopo",
-   "exp": {
-    "ate99": 20,
-    "de100a174": 20,
-    "nv175mais": 20
-   },
-   "caveats": "Efeito somente durante o evento das Pipocas.",
-   "raceOnly": null,
-   "view": 1895,
-   "dp": "https://www.divine-pride.net/database/item/31736",
-   "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=%5BVisual%5D+Peruca+de+Pipoca"
-  },
-  {
-   "id": 400799,
-   "name": "[Visual] Capuz de Kumamon",
-   "slot": "visualTopo",
-   "exp": {
-    "ate99": 5,
-    "de100a174": 5,
-    "nv175mais": 5
-   },
-   "caveats": "Efeitos serão deletados em 21/07/2026. +5% adicional no conjunto com a Mochila de Kumamon.",
-   "raceOnly": null,
-   "view": 2675,
-   "dp": "https://www.divine-pride.net/database/item/400799",
-   "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=%5BVisual%5D+Capuz+de+Kumamon"
-  },
-  {
    "id": 19533,
    "name": "[Visual] Touca de Esporo",
    "slot": "visualTopo",
@@ -2159,36 +2114,6 @@
    "view": 114,
    "dp": "https://www.divine-pride.net/database/item/19533",
    "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=%5BVisual%5D+Touca+de+Esporo"
-  },
-  {
-   "id": 410069,
-   "name": "[Visual] Pipoquinho",
-   "slot": "visualMeio",
-   "exp": {
-    "ate99": 20,
-    "de100a174": 20,
-    "nv175mais": 20
-   },
-   "caveats": "Efeito somente durante o evento das Pipocas.",
-   "raceOnly": null,
-   "view": 2142,
-   "dp": "https://www.divine-pride.net/database/item/410069",
-   "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=%5BVisual%5D+Pipoquinho"
-  },
-  {
-   "id": 480559,
-   "name": "[Visual] Mochila de Kumamon",
-   "slot": "visualCapa",
-   "exp": {
-    "ate99": 5,
-    "de100a174": 5,
-    "nv175mais": 5
-   },
-   "caveats": "Efeitos serão deletados em 21/07/2026.",
-   "raceOnly": null,
-   "view": 262,
-   "dp": "https://www.divine-pride.net/database/item/480559",
-   "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=%5BVisual%5D+Mochila+de+Kumamon"
   },
   {
    "id": 25171,
@@ -2312,14 +2237,6 @@
    ],
    "bonus": 4,
    "note": "Super Óculos Poring (variante) + Botas do ArchAngeling"
-  },
-  {
-   "items": [
-    400799,
-    480559
-   ],
-   "bonus": 5,
-   "note": "Capuz de Kumamon + Mochila de Kumamon (evento)"
   },
   {
    "items": [

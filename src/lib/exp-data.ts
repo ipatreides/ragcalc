@@ -53,7 +53,7 @@ export interface SlotDef {
   group: 'principal' | 'carta' | 'sombrio' | 'visual' | 'pedra';
 }
 
-export const SLOTS: ReadonlyArray<SlotDef> = [
+const ALL_SLOTS: ReadonlyArray<SlotDef> = [
   { key: 'topo', label: 'Topo', pool: 'topo', group: 'principal' },
   { key: 'meio', label: 'Meio', pool: 'meio', group: 'principal' },
   { key: 'baixo', label: 'Baixo', pool: 'baixo', group: 'principal' },
@@ -76,6 +76,14 @@ export const SLOTS: ReadonlyArray<SlotDef> = [
   { key: 'pedraMeio', label: 'Pedra (Meio)', pool: 'pedraMeio', group: 'pedra' },
   { key: 'pedraBaixo', label: 'Pedra (Baixo)', pool: 'pedraBaixo', group: 'pedra' },
 ];
+
+// A pool goes empty when its items are removed (expired events). Hide those
+// slots instead of rendering a picker with nothing to pick.
+const POOLS_WITH_ITEMS: ReadonlySet<string> = new Set(ITEMS.map((item) => item.slot));
+
+export const SLOTS: ReadonlyArray<SlotDef> = ALL_SLOTS.filter((s) =>
+  POOLS_WITH_ITEMS.has(s.pool),
+);
 
 export const SLOT_BY_KEY: ReadonlyMap<string, SlotDef> = new Map(
   SLOTS.map((s) => [s.key, s]),

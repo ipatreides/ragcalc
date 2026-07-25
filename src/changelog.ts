@@ -14,6 +14,13 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: "0.3.2",
+    date: "2026-07-25",
+    changes: [
+      "Os itens dos eventos do Kumamon e das Pipocas saíram da calculadora de Conjunto de EXP: os eventos acabaram e os efeitos não valem mais. Com isso, os espaços de Visual (Meio) e Visual (Capa) deixam de aparecer, já que ficaram sem itens.",
+    ],
+  },
+  {
     version: "0.3.1",
     date: "2026-07-23",
     changes: [

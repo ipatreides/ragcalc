@@ -6,6 +6,24 @@ o versionamento é informal enquanto o projeto está pré-1.0. O texto voltado a
 usuário (e a fonte do anúncio automático no Discord após o deploy) fica em
 `src/changelog.ts`.
 
+## [0.3.2] — 2026-07-25
+
+### Removido
+
+- **Itens dos eventos do Kumamon e das Pipocas** na Calculadora de Conjunto de
+  EXP — os eventos acabaram e os efeitos foram deletados: `[Visual] Pipocas
+  Saltitantes` (31518), `[Visual] Peruca de Pipoca` (31736), `[Visual] Capuz de
+  Kumamon` (400799), `[Visual] Pipoquinho` (410069) e `[Visual] Mochila de
+  Kumamon` (480559), além do bônus de conjunto Capuz + Mochila de Kumamon (+5%).
+
+### Alterado
+
+- Os espaços cujo conjunto de itens ficou vazio deixam de ser exibidos na grade
+  e nas tabelas por espaço (`SLOTS` agora filtra os pools sem itens em
+  `src/lib/exp-data.ts`). Na prática, somem Visual (Meio) e Visual (Capa).
+  Links compartilhados antigos continuam funcionando: ids desconhecidos já eram
+  ignorados na leitura do permalink.
+
 ## [0.3.1] — 2026-07-23
 
 ### Adicionado
