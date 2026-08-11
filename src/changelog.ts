@@ -14,6 +14,15 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: "0.3.3",
+    date: "2026-08-11",
+    changes: [
+      "Nova classe na prévia do personagem da calculadora de Conjunto de EXP: Druida, a quarta classe dos Dorams.",
+      "Nomes de classe corrigidos para os do jogo: Arquimágico (estava \"Magus\"), Poeta (\"Maestro\"), Assassino (\"Executor\"), Hiperaprendiz (\"Hyper Novice\"), Mestre Celestial (\"Sky Emperor\"), Asceta (\"Soul Ascetic\") e Guerrilheiro (\"Night Watch\").",
+      "As quartas classes mais recentes voltam a mostrar o emblema da classe na lista, no lugar do bonequinho que aparecia como substituto.",
+    ],
+  },
+  {
     version: "0.3.2",
     date: "2026-07-25",
     changes: [
