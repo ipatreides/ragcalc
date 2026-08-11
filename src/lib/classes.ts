@@ -12,11 +12,12 @@ export interface CharClass {
   genders: Gender[];
 }
 
-interface RawClass {
-  id: number;
-  name: string;
-  group: string;
-  palettes: { m?: unknown; f?: unknown };
+// One record of classes.json, which is generated from ragassets by
+// `node tools/sync-classes.mjs` and never edited by hand.
+interface RawClass extends CharClass {
+  /** Client JT constant (JT_SKY_EMPEROR). The stable key across client updates —
+   *  names get retranslated, ids don't move — but nothing here reads it. */
+  jt: string;
 }
 
 // Group display order + pt-BR labels for the grouped <select>.
@@ -32,12 +33,7 @@ export const CLASS_GROUPS: ReadonlyArray<{ key: string; label: string }> = [
 ];
 
 export const CLASSES: ReadonlyArray<CharClass> = (rawClasses.classes as RawClass[]).map(
-  (c) => {
-    const genders: Gender[] = [];
-    if (c.palettes.m) genders.push('male');
-    if (c.palettes.f) genders.push('female');
-    return { id: c.id, name: c.name, group: c.group, genders };
-  },
+  ({ id, name, group, genders }) => ({ id, name, group, genders }),
 );
 
 export const CLASS_BY_ID: ReadonlyMap<number, CharClass> = new Map(
@@ -53,31 +49,9 @@ export function resolveGender(classId: number, desired: Gender): Gender {
   return cls.genders.includes(desired) ? desired : cls.genders[0]!;
 }
 
-// The newest 4th jobs have no party-emblem icon in the client, so ragassets
-// can't serve /icons/job/<id>.png for them — fall back to a head-framed sprite
-// render (same trick latamvisuais uses). Gender-locked ones render in their sex.
-const JOB_ICON_FALLBACK: Record<number, Gender> = {
-  4302: 'male', // Sky Emperor
-  4303: 'male', // Soul Ascetic
-  4304: 'male', // Shinkiro (male-locked)
-  4305: 'female', // Shiranui (female-locked)
-  4306: 'male', // Night Watch
-  4307: 'male', // Hyper Novice
-};
-
-// Party-emblem icon for a class (25×25), with a sprite-render fallback.
+// Party-emblem icon for a class (25×25). Every id in classes.json has one:
+// ragassets serves the icon at the same id it renders the class at, and drops
+// classes whose icon the server hasn't shipped.
 export function jobIconUrl(id: number): string {
-  const gender = JOB_ICON_FALLBACK[id];
-  if (gender) {
-    const p = new URLSearchParams();
-    p.set('job', String(id));
-    p.set('gender', gender);
-    p.set('head', '1');
-    p.set('action', '0');
-    p.set('frame', '0');
-    p.set('headdir', '0');
-    p.set('canvas', '44x40+22+86');
-    return `https://assets.latam-tools.com.br/image?${p.toString()}`;
-  }
   return `https://assets.latam-tools.com.br/icons/job/${id}.png`;
 }

@@ -6,6 +6,45 @@ o versionamento é informal enquanto o projeto está pré-1.0. O texto voltado a
 usuário (e a fonte do anúncio automático no Discord após o deploy) fica em
 `src/changelog.ts`.
 
+## [0.3.3] — 2026-08-11
+
+### Adicionado
+
+- **`tools/sync-classes.mjs`** — gera `src/lib/classes.json` a partir de
+  `https://assets.latam-tools.com.br/raw/classes.json` (projeto irmão ragassets,
+  que extrai a tabela do GRF do cliente LATAM). Aceita `--input` para ler um
+  arquivo local, além de `--url` e `--out`. Substitui a cópia manual vinda do
+  `public/db/classes.json` do latamvisuais, que era como o arquivo ficava
+  desatualizado sem ninguém perceber. Documentado em
+  `.claude/skills/sync-with-ragassets/SKILL.md`.
+- **Druida** (id 4308), a quarta classe dos Dorams, que faltava na lista.
+- Testes: `tools/sync-classes.test.mjs` (transformação, sobre uma fatia real da
+  tabela de origem em `tools/fixtures/classes-raw.json`, sem rede) e
+  `src/lib/classes.test.ts` (saída de `CLASSES` fixada por classe).
+
+### Alterado
+
+- `src/lib/classes.json` passa a conter só o que o app consome
+  (`{id, jt, name, group, genders}`): 22.8 kB → 8.1 kB. As paletas de cor de
+  roupa eram herança da cópia do latamvisuais e nunca foram lidas aqui — o que
+  o app usa delas (existe sprite masculino/feminino?) virou `genders`, calculado
+  na geração em vez de a cada carga da página.
+- `group` é classificação nossa (não existe na origem) e agora mora em `GROUPS`,
+  em `tools/sync-classes.mjs`, que também fixa a ordem da lista. Uma classe nova
+  na origem sem grupo faz o script falhar em vez de escrever a tabela.
+- Nomes corrigidos para os rótulos do próprio cliente LATAM: Arquimágico
+  (era `Magus`), Poeta (`Maestro`), Assassino (`Executor`), Hiperaprendiz
+  (`Hyper Novice`), Mestre Celestial (`Sky Emperor`), Asceta (`Soul Ascetic`) e
+  Guerrilheiro (`Night Watch`).
+
+### Removido
+
+- `JOB_ICON_FALLBACK` em `src/lib/classes.ts`. Ele existia porque a cópia manual
+  não trazia o `renderId` e o ragassets não servia `/icons/job/<id>.png` para as
+  quartas classes expandidas; hoje serve para 4302–4308, e o id do arquivo já é
+  o `renderId`. As classes que caíam no fallback voltam ao emblema de classe em
+  vez do render de sprite.
+
 ## [0.3.2] — 2026-07-25
 
 ### Removido

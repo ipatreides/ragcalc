@@ -5,4 +5,7 @@ dist
 .firebase
 .env
 .env.local
-.claude/
+# Local Claude Code state stays out; skills are project docs and are shared
+# (same split as the sibling ragassets/ragreplaystats/latamvisuais repos).
+.claude/*
+!.claude/skills/
