@@ -29,6 +29,7 @@ import {
   jobIconUrl,
   resolveGender,
 } from '../lib/classes';
+import { footerHtml } from '../lib/site-footer';
 
 const RAGASSETS = 'https://assets.latam-tools.com.br';
 // Taller render than the reference (169) so full headgear + under-ground poses
@@ -242,11 +243,7 @@ export function renderExpCalculator(root: HTMLElement): void {
           <span class="share-feedback" data-out="share-feedback" aria-live="polite"></span>
         </section>
       </main>
-      <footer class="site-footer">
-        <p>Veja mais ferramentas em <a href="https://latam-tools.com.br" target="_blank" rel="noopener noreferrer">latam-tools.com.br</a>.</p>
-        <p>Entre no nosso <a href="https://discord.gg/JCXTqqWq9Q" target="_blank" rel="noopener noreferrer">Discord</a>. Projeto open source no <a href="https://github.com/adsonpleal/ragcalc" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-        <p class="footer-version"><a href="https://github.com/adsonpleal/ragcalc/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">RagCalc v${APP_VERSION}</a></p>
-      </footer>
+      ${footerHtml(APP_VERSION)}
     `;
 
     bindEvents();

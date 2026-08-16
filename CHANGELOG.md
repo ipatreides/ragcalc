@@ -6,6 +6,25 @@ o versionamento é informal enquanto o projeto está pré-1.0. O texto voltado a
 usuário (e a fonte do anúncio automático no Discord após o deploy) fica em
 `src/changelog.ts`.
 
+## [0.3.4] — 2026-08-16
+
+### Adicionado
+
+- Links de **"Reportar um problema"** e **"Acompanhar os reportes"** no rodapé,
+  apontando para o rastreador unificado das ferramentas do RO LATAM
+  (`https://issues.latam-tools.com.br`, filtrado por `?projeto=calc`). Até agora
+  o projeto não tinha nenhum caminho de report: só o Discord, que continua no
+  rodapé — isto é adição, não substituição.
+- **`src/lib/site-footer.ts`**, exportando `footerHtml(version)`.
+
+### Alterado
+
+- `src/home.ts`, `src/components/calculator-view.ts`,
+  `src/components/exp-view.ts` e `src/components/martelo-view.ts` passam a
+  chamar `footerHtml(APP_VERSION)`. A marcação do rodapé estava copiada
+  literalmente nos quatro arquivos, então mexer em um só deixava três telas
+  para trás — foi exatamente esse risco que motivou a extração.
+
 ## [0.3.3] — 2026-08-11
 
 ### Adicionado

@@ -14,6 +14,13 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: "0.3.4",
+    date: "2026-08-16",
+    changes: [
+      "O rodapé de todas as telas ganhou dois links novos: \"Reportar um problema\", para mandar erro ou sugestão sem depender do Discord, e \"Acompanhar os reportes\", para ver o que já foi enviado e em que pé está.",
+    ],
+  },
+  {
     version: "0.3.3",
     date: "2026-08-11",
     changes: [
