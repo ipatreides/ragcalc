@@ -125,14 +125,29 @@
    "name": "Espírito da Chung E",
    "slot": "topo",
    "exp": {
-    "ate99": 1,
-    "de100a174": 1,
-    "nv175mais": 1
+    "ate99": 5,
+    "de100a174": 5,
+    "nv175mais": 5
    },
-   "caveats": null,
+   "caveats": "+1% a cada 2 refinos — valor considera +10. Também DROP +1% a cada 2 refinos.",
    "raceOnly": null,
    "view": 882,
    "dp": "https://www.divine-pride.net/database/item/19135",
+   "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=Esp%C3%ADrito+da+Chung+E"
+  },
+  {
+   "id": 19136,
+   "name": "Espírito da Chung E",
+   "slot": "topo",
+   "exp": {
+    "ate99": 5,
+    "de100a174": 5,
+    "nv175mais": 5
+   },
+   "caveats": "+1% a cada 2 refinos — valor considera +10. Também DROP +1% a cada 2 refinos. Versão com slot de carta (mesmo nome, id 19136).",
+   "raceOnly": null,
+   "view": 882,
+   "dp": "https://www.divine-pride.net/database/item/19136",
    "market": "https://ro.gnjoylatam.com/pt/intro/shop-search/trading?storeType=BUY&serverType=FREYA&searchWord=Esp%C3%ADrito+da+Chung+E"
   },
   {

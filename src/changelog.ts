@@ -14,6 +14,14 @@ export type ChangelogEntry = {
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    version: "0.3.5",
+    date: "2026-08-18",
+    changes: [
+      "O Espírito da Chung E com slot de carta entrou na lista de Topo do Conjunto de EXP — é o mesmo chapéu que já estava lá, na versão que aceita carta.",
+      "Correção no Espírito da Chung E: aparecia como 1% de EXP, quando o certo é 5% no refino +10 (o bônus sobe +1% a cada 2 refinos).",
+    ],
+  },
+  {
     version: "0.3.4",
     date: "2026-08-16",
     changes: [

@@ -6,6 +6,42 @@ o versionamento é informal enquanto o projeto está pré-1.0. O texto voltado a
 usuário (e a fonte do anúncio automático no Discord após o deploy) fica em
 `src/changelog.ts`.
 
+## [0.3.5] — 2026-08-18
+
+### Adicionado
+
+- **Espírito da Chung E com slot** (id 19136) na lista de Topo do Conjunto de
+  EXP. É o mesmo chapéu do 19135 já listado, na versão com slot de carta vendida
+  pelo NPC do item mall (`Spirit_Of_Chung_E_`, `slots: 1`), com o mesmo bônus de
+  EXP. Segue a convenção dos outros pares de mesmo nome (13001/13030,
+  19117/19118): nome idêntico, diferença explicada em `caveats`.
+
+### Corrigido
+
+- **Espírito da Chung E** (id 19135) valia 1% em todas as faixas, sem ressalva.
+  O bônus é de +1% **a cada 2 refinos**, então o valor certo pela convenção do
+  arquivo — que registra o item no refino máximo praticável — é 5% no +10, como
+  já era feito nas dez Mochilas de Amistr, que têm exatamente a mesma mecânica.
+  O item estava assim desde o commit que criou a calculadora.
+
+### Sincronizado
+
+- `src/lib/classes.json` regerado do ragassets após a atualização do cliente de
+  2026-08-18: **sem mudanças** (85 classes). A atualização trouxe só 19 sprites
+  novos, todos de monstro (`geffen_mage_1..12`, `fei_kanabian`, `golem`,
+  `fenrir`, `md_airboat_boss`, `giant_honet`), nenhum equipamento.
+
+### Corrigido (interno)
+
+- `tools/sync-classes.mjs` perdeu o shebang `#!/usr/bin/env node`. O Node ignora
+  shebang, mas o transform do vite-node não, então
+  `tools/sync-classes.test.mjs` quebrava na coleta com
+  `SyntaxError: Invalid or unexpected token` e **nunca chegou a rodar** desde que
+  foi escrito. Com isso, os 9 testes do arquivo passaram a rodar de fato — entre
+  eles o que garante que `src/lib/classes.json` é exatamente a saída do script.
+  O script sempre foi chamado como `node tools/sync-classes.mjs`, então nada
+  dependia do shebang.
+
 ## [0.3.4] — 2026-08-16
 
 ### Adicionado

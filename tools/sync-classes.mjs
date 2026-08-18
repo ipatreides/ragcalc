@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // Build src/lib/classes.json — the playable-class list the class picker reads
 // (src/lib/classes.ts → CLASSES).
 //
